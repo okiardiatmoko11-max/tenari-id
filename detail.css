@@ -1,0 +1,289 @@
+/* --- DETAIL PAGE SPECIFIC STYLES --- */
+
+.page-header {
+  padding-top: 180px;
+  padding-bottom: 80px;
+  background: linear-gradient(to bottom, #f9f9f9, #fff);
+}
+
+.breadcrumbs {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-gray);
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-gray);
+  max-width: 800px;
+}
+
+.content-wrapper {
+  padding-top: 0;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.main-content h3 {
+  margin: 40px 0 20px;
+  font-size: 1.8rem;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  color: var(--color-text-gray);
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 25px 0;
+}
+
+.feature-list li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-gray);
+}
+
+.feature-list li::before {
+  content: "→";
+  margin-right: 15px;
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+/* Sidebar Styling */
+.sidebar-card {
+  background: var(--color-bg-light);
+  padding: 40px;
+  border-radius: 4px;
+  position: sticky;
+  top: 120px;
+}
+
+.sidebar-card h4 {
+  margin-bottom: 15px;
+}
+
+.sidebar-card p {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  color: var(--color-text-gray);
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+}
+
+.related-services {
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.related-services small {
+  display: block;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.related-services nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.related-services a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.related-services a:hover {
+  padding-left: 5px;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .page-title {
+    font-size: 2.5rem;
+  }
+  .page-header {
+    padding-top: 140px;
+  }
+}
+/* gambar */
+.featured-image {
+  width: 100%;
+  /* Hapus height: 400px; yang lama */
+  height: auto;
+
+  /* Tambahkan max-height biar gak kegedean kalau dapet gambar vertikal */
+  max-height: 500px;
+
+  /* Ganti cover jadi contain biar gambar muncul UTUH */
+  object-fit: contain;
+
+  /* Kalau background gambar gak transparan, contain bakal nyisain ruang kosong. 
+       Kita taruh di tengah pakai margin auto */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border-radius: 12px;
+}
+
+/* Khusus untuk Gambar PNG/Maskot agar tidak kepotong */
+.featured-image.is-png {
+  height: auto; /* Biar tingginya ngikutin gambar asli */
+  max-height: 450px;
+  object-fit: contain; /* INI KUNCINYA: Gambar bakal muncul utuh */
+  background: transparent;
+}
+
+/* --- PORTFOLIO STYLES --- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: 0.3s;
+}
+
+.portfolio-item:hover .portfolio-img {
+  filter: grayscale(0%);
+}
+
+.portfolio-info {
+  padding: 20px;
+  background: #fff;
+}
+
+.portfolio-info span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-text-gray);
+  letter-spacing: 1px;
+}
+
+.portfolio-info h4 {
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+/* --- CONSULTATION FORM STYLES --- */
+.contact-form-container {
+  background: #fff;
+  padding: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-black);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-black);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-item {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.info-item strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+/* SATU-SATUNYA ATURAN UNTUK GAMBAR FITUR */
+/* Khusus untuk gambar konten, bukan logo */
+.main-featured-img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 35px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 30px auto;
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .main-featured-img {
+    height: auto !important;
+  }
+}
